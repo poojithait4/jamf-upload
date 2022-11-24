@@ -121,7 +121,7 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
     subprocess.check_output(curl_cmd)
 
     r = namedtuple(
-        "r", ["headers", "status_code", "output"], defaults=(None, None, None)
+        "r", ["headers", "status_code", "output"]
     )
     try:
         with open(headers_file, "r") as file:
