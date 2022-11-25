@@ -123,9 +123,6 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
     r = namedtuple(
         "r", ["headers", "status_code", "output"]
     )
-    print("headers="+namedtuple.headers)
-    print("status_code="+namestuple.status_code)
-    print("output"=+namedtuple.output)
     try:
         with open(headers_file, "r") as file:
             headers = file.readlines()
