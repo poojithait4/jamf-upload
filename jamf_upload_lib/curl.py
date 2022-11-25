@@ -123,6 +123,9 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
     r = namedtuple(
         "r", ["headers", "status_code", "output"]
     )
+    print("headers="+namedtuple.headers)
+    print("status_code="+namestuple.status_code)
+    print("output"=+namedtuple.output)
     try:
         with open(headers_file, "r") as file:
             headers = file.readlines()
@@ -140,6 +143,10 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
                 r.output = file.read()
     else:
         print(f"No output from request ({output_file} not found or empty)")
+    print(r)
+    print(r.headers)
+    print(r.status_code)
+    print(r.output)
     return r()
 
 
