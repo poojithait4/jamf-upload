@@ -123,7 +123,7 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
     r = namedtuple(
         "r", ["headers", "status_code", "output"]
     )
-    r = r(None, None, None)
+    #r = r(None, None, None)
     print(r.headers)
     print(r.status_code)
     print(r.output)
@@ -148,7 +148,7 @@ def request(method, url, auth, verbosity, data="", additional_headers="", xml=Fa
     print(r.headers)
     print(r.status_code)
     print(r.output)
-    return r()
+    return r
 
 
 def status_check(r, endpoint_type, obj_name, request_type="upload"):
