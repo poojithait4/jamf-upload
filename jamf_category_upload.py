@@ -83,10 +83,11 @@ def upload_category(jamf_url, category_name, priority, verbosity, token, obj_id=
         api_get.get_headers(r)
 
     # clean up temp files
+    print("category_json_temp_value:"+category_json_temp)
+    print("category_json:"+category_json)
     for file in category_json, category_json_temp:
         if os.path.exists(file):
             os.remove(file)
-
     return r
 
 
